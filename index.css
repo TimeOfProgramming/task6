@@ -1,0 +1,72 @@
+/* Basic styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+h1, h2 {
+  color: #333;
+  text-align: center;
+}
+
+/* Horizontal Flexbox container */
+.flex-container.horizontal {
+  display: flex;
+  justify-content: space-around; /* Distributes space around the items */
+  align-items: center; /* Aligns items vertically in the center */
+  border: 2px solid #3498db;
+  padding: 20px;
+  height: 50vh; /* Half viewport height */
+}
+
+/* Vertical Flexbox container */
+.flex-container.vertical {
+  display: flex;
+  flex-direction: column; /* Flex items are laid out in a column */
+  justify-content: space-between; /* Distributes space between the items */
+  align-items: center; /* Aligns items horizontally in the center */
+  border: 2px solid #e74c3c;
+  padding: 20px;
+  height: 50vh; /* Half viewport height */
+}
+
+/* Flex items */
+.flex-item {
+  background-color: #3498db;
+  color: white;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  text-align: center;
+  flex: 1 1 100px; /* Flex-grow, flex-shrink, flex-basis */
+}
+
+/* Specific styles for items */
+.item1 {
+  flex: 2 1 150px; /* This item will take twice the space of others */
+}
+
+.item2, .item3, .item4 {
+  flex: 1 1 150px;
+}
+
+.item3 {
+  order: -1; /* This item will appear first */
+}
+
+.item4 {
+  align-self: flex-end; /* This item will align itself at the end vertically */
+}
+
+/* Additional styles for vertical items */
+.item5, .item6, .item7, .item8 {
+  background-color: #e74c3c;
+}
+
+.item6 {
+  align-self: flex-start; /* This item will align itself at the start horizontally */
+}
+
+.item7 {
+  flex: 2 1 100px; /* This item will take twice the space of others in vertical flex container */
+}
